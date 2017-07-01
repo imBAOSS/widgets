@@ -22,10 +22,20 @@ class Clock extends React.Component {
   }
 
   render() {
+    let hours = this.state.time.getHours();
+    let minutes = this.state.time.getMinutes();
+    let seconds = this.state.time.getSeconds();
+    let meridiem = (hours > 12) ? "PM" : "AM"
+
+    hours = (hours < 10) ? `0${hours}` : hours
+    minutes = (minutes < 10) ? `0${minutes}` : minutes
+    seconds = (seconds < 10) ? `0${seconds}` : seconds
+
     return(
-      <div>
-        <h1>Clock Widget</h1>
-        {this.state.time}
+      <div className='clock-widget-container'>
+        <h3>Clock Widget</h3>
+        <div>Time: {`${hours % 12}:${minutes}:${seconds} ${meridiem}`}</div>
+        <div>Date: {this.state.time.toDateString()}</div>
       </div>
     )
   }
