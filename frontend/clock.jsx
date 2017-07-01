@@ -33,7 +33,7 @@ class Clock extends React.Component {
 
     return(
       <div className='clock-widget-container'>
-        <h3>Clock Widget</h3>
+        <h3>Clock</h3>
         <div>Time: {`${hours % 12}:${minutes}:${seconds} ${meridiem}`}</div>
         <div>Date: {this.state.time.toDateString()}</div>
       </div>
