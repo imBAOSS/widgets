@@ -1,6 +1,6 @@
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
-section, img, div, h2, p, form,
+section, img, div, h2, h3, p, form,
 fieldset, label, input, textarea,
 span, article, footer, time, small {
   margin: 0;
@@ -14,5 +14,19 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent; }
+
+.clock-widget-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  background-color: gray;
+  box-sizing: border-box; }
+  .clock-widget-container h3 {
+    font-weight: bold; }
+  .clock-widget-container div {
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
