@@ -19,8 +19,6 @@ class Weather extends React.Component {
     let lon = pos.coords.longitude;
     let xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET", `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=e25e6b12ae09d7e3f36780e406bf000a`, true);
-
     xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.cod === 200) {
         const data = JSON.parse(xmlhttp.responseText)
@@ -28,6 +26,8 @@ class Weather extends React.Component {
         console.log(xmlhttp.responseText);
       }
     }
+
+    xmlhttp.open("GET", `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=e25e6b12ae09d7e3f36780e406bf000a`, true);
 
     xmlhttp.send();
   }
