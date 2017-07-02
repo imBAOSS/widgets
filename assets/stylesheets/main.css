@@ -29,4 +29,18 @@ span, article, footer, time, small {
   .clock-widget-container div {
     font-weight: bold; }
 
+.weather-widget-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  background-color: gray;
+  box-sizing: border-box; }
+  .weather-widget-container h3 {
+    font-weight: bold; }
+  .weather-widget-container div {
+    font-weight: bold; }
+
 /*# sourceMappingURL=main.css.map */
