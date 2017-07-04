@@ -18,7 +18,7 @@ class Autocomplete extends React.Component {
   render() {
     return(
       <div>
-        <input onChange={this.handleUpdate}></input>
+        <input onChange={ this.handleUpdate }></input>
       </div>
     )
   }
