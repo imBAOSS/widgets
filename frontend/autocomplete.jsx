@@ -17,8 +17,12 @@ class Autocomplete extends React.Component {
 
   render() {
     return(
-      <div>
-        <input onChange={ this.handleUpdate }></input>
+      <div className='autocomplete-widget-container'>
+        <h3>Autocomplete</h3>
+        <input
+          onChange={ this.handleUpdate }
+          placeholder='Search names...'
+          value={ this.state.inputVal }></input>
       </div>
     )
   }
